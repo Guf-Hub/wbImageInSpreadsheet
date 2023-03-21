@@ -1,4 +1,4 @@
-# wbPhotoLink
+# WildberriesImageInGoogleSpreadsheet
 
 Получение изображений в Google таблицу по коду товара (nmId) Wildberries.</br>
 
