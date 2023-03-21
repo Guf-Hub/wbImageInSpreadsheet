@@ -16,8 +16,8 @@ function onOpen(e) {
  * @const
  */
 const CONFIG = {
-  sheetName: "НАЗВАНИЕ ВАШЕГО ЛИСТ", // лист книги для вставки
-  wbIdColumn: ЧИСЛО, // номер столбца с nmId WB
+  sheetName: "НАЗВАНИЕТ", // название листа книги для вставки
+  wbIdColumn: ЧИСЛО, // номер столбца с nmId Wildberries
   pastColumn: ЧИСЛО, // номер столбца для вставки ссылок на фото
 };
 
@@ -32,8 +32,8 @@ function getImg() {
 /**
  * Создание и вставка картинки из карточки Wildberries
  * @param {SpreadsheetApp.Sheet} sheet лист книги
- * @param {number} wbIdColumn столбец с nmId
- * @param {number} pastColumn столбец для вставки ссылок на фото
+ * @param {number} wbIdColumn столбец с nmId Wildberries
+ * @param {number} pastColumn столбец для вставки ссылок на изображения
  */
 function img(sheet, wbIdColumn, pastColumn) {
   const data = sheet.getDataRange().getValues();
