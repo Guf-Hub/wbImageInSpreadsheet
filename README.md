@@ -1,7 +1,7 @@
-# Set image from Wildberries in Google Spreadsheet
+# Добавление главных изображений карточек товаров с сайта Wildberries в Google таблицу
 <!-- HEADER START -->
 <p style='text-align: center;'>
-  <a href="https://openapi.wb.ru/"><img src="https://github.com/Guf-Hub/Wildberries/blob/main/src/wildberries.png"></a>
+  <a href="https://openapi.wb.ru/"><img src="https://github.com/Guf-Hub/wbImageInSpreadsheet/blob/main/Image%20from%20Wildberries.png"></a>
 </p>
 <hr />
 <!-- HEADER END -->
