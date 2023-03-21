@@ -1,4 +1,4 @@
-# Set Wildberries image in Google Spreadsheet
+# Set image from Wildberries in Google Spreadsheet
 <!-- HEADER START -->
 <p style='text-align: center;'>
   <a href="https://openapi.wb.ru/"><img src="https://github.com/Guf-Hub/Wildberries/blob/main/src/wildberries.png"></a>
