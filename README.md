@@ -3,9 +3,11 @@
 Получение изображений в Google таблицу по коду товара (nmId) Wildberries.</br>
 
 [![Donate](https://img.shields.io/badge/Donate-Yoomoney-green.svg)](https://yoomoney.ru/to/410019620244262)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Guf-Hub/wbPhotoLink)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Guf-Hub/WildberriesImageInGoogleSpreadsheet)
 ![javascript](https://img.shields.io/badge/lang-javascript-red)
 ![GAS](https://img.shields.io/badge/google-apps%20script-red)
+
+[Feedback](https://t.me/nosaev_m)<br/>
 
 ## Использование:
 * Полностью копируйте [скрипт](https://github.com/Guf-Hub/wbPhotoLink/blob/main/Code.js) в свою таблицу;
