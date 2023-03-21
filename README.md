@@ -7,7 +7,7 @@
 ![javascript](https://img.shields.io/badge/lang-javascript-red)
 ![GAS](https://img.shields.io/badge/google-apps%20script-red)
 
-[Feedback](https://t.me/nosaev_m)<br/>
+[**Feedback**](https://t.me/nosaev_m)<br/>
 
 ## Использование:
 * Полностью копируйте [скрипт](https://github.com/Guf-Hub/wbPhotoLink/blob/main/Code.js) в свою таблицу;
