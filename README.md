@@ -13,6 +13,7 @@
 ![javascript](https://img.shields.io/badge/lang-javascript-red)
 ![GAS](https://img.shields.io/badge/google-apps%20script-red)
 
+[**Пример таблицы**](https://docs.google.com/spreadsheets/d/1XS6EjLATRreuuVR9YyISTQfkWPNAbYGhW_GW_m2ylec/edit#gid=0)<br/>
 [**Feedback**](https://t.me/nosaev_m)<br/>
 
 ## Использование:
