@@ -1,4 +1,5 @@
 /**
+ * @OnlyCurrentDoc
  * @author Mikhail Nosaev <m.nosaev@gmail.com>
  * @see {@link https://t.me/nosaev_m Telegram} разработка Google таблиц и GAS скриптов
  * @license MIT
