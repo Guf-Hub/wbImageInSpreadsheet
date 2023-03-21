@@ -1,4 +1,10 @@
 # wbImageInSpreadsheet
+<!-- HEADER START -->
+<p style='text-align: center;'>
+  <a href="https://openapi.wb.ru/"><img src="https://github.com/Guf-Hub/Wildberries/blob/main/src/wildberries.png"></a>
+</p>
+<hr />
+<!-- HEADER END -->
 
 Получение изображений в Google таблицу по коду товара (nmId) Wildberries.</br>
 
