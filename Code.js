@@ -18,7 +18,7 @@ function onOpen(e) {
 const CONFIG = {
   sheetName: "НАЗВАНИЕТ", // название листа книги для вставки
   wbIdColumn: ЧИСЛО, // номер столбца с nmId Wildberries
-  pastColumn: ЧИСЛО, // номер столбца для вставки ссылок на фото
+  pastColumn: ЧИСЛО, // номер столбца для вставки ссылок на изображения
 };
 
 // main
@@ -30,7 +30,7 @@ function getImg() {
 }
 
 /**
- * Создание и вставка картинки из карточки Wildberries
+ * Создание ссылки и вставка изображений
  * @param {SpreadsheetApp.Sheet} sheet лист книги
  * @param {number} wbIdColumn столбец с nmId Wildberries
  * @param {number} pastColumn столбец для вставки ссылок на изображения
