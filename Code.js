@@ -27,7 +27,7 @@ function getImg() {
   const sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(
     CONFIG.sheetName
   );
-  img(sh, CONFIG.wbIdColumn-1, CONFIG.pastColumn);
+  img(sh, CONFIG.wbIdColumn - 1, CONFIG.pastColumn);
 }
 
 /**
