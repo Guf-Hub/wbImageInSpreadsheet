@@ -8,7 +8,7 @@
 function onOpen(e) {
   SpreadsheetApp.getUi()
     .createMenu(`🔽 МЕНЮ`)
-    .addItem("🔄 Полчить фото", "getImg")
+    .addItem("🔄 Получить фото", "getImg")
     .addToUi();
 }
 
