@@ -38,15 +38,18 @@ function getImg() {
  */
 function img(sheet, wbIdColumn, pastColumn) {
   const data = sheet.getDataRange().getValues();
+  const wbIdColumnIndex = wbIdColumn - 1;
   let result = [["Фото"]];
   data.map((r, i) => {
     if (i > 0) {
       if (
-        r[wbIdColumn] &&
-        typeof r[wbIdColumn] === "number" &&
-        r[wbIdColumn] > 0
+        r[wbIdColumnIndex] &&
+        typeof r[wbIdColumnIndex] === "number" &&
+        r[wbIdColumnIndex] > 0
       ) {
-        result.push([`=IMAGE("${new GenerateImgUrl(r[wbIdColumn]).url()}")`]);
+        result.push([
+          `=IMAGE("${new GenerateImgUrl(r[wbIdColumnIndex]).url()}")`,
+        ]);
       } else {
         result.push([""]);
       }
