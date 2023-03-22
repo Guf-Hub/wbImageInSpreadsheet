@@ -1,7 +1,7 @@
 # Добавление главных изображений карточек товаров с сайта Wildberries в Google таблицу
 <!-- HEADER START -->
 <p style='text-align: center;'>
-  <a href="https://openapi.wb.ru/"><img src="https://github.com/Guf-Hub/wbImageInSpreadsheet/blob/main/Image%20from%20Wildberries.png"></a>
+  <a href="https://openapi.wb.ru/"><img src="https://user-images.githubusercontent.com/72359732/226855604-cb89cd62-6288-4a9a-9243-3753cdff43d5.png"></a>
 </p>
 <hr />
 <!-- HEADER END -->
