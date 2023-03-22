@@ -27,7 +27,7 @@ function getImg() {
   const sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(
     CONFIG.sheetName
   );
-  img(sh, CONFIG.wbIdColumn - 1, CONFIG.pastColumn);
+  img_(sh, CONFIG.wbIdColumn, CONFIG.pastColumn);
 }
 
 /**
@@ -36,7 +36,7 @@ function getImg() {
  * @param {number} wbIdColumn столбец с nmId Wildberries
  * @param {number} pastColumn столбец для вставки ссылок на изображения
  */
-function img(sheet, wbIdColumn, pastColumn) {
+function img_(sheet, wbIdColumn, pastColumn) {
   const data = sheet.getDataRange().getValues();
   const wbIdColumnIndex = wbIdColumn - 1;
   let result = [["Фото"]];
