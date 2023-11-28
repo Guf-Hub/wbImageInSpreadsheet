@@ -22,12 +22,10 @@ const CONFIG = {
   pastColumn: ЧИСЛО, // номер столбца для вставки ссылок на изображения
 };
 
-// main
 function getImg() {
-  const sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(
-    CONFIG.sheetName
-  );
-  img_(sh, CONFIG.wbIdColumn, CONFIG.pastColumn);
+  const { sheetName, wbIdColumn, pastColumn } = CONFIG;
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
+  img_(sheet, wbIdColumn, pastColumn);
 }
 
 /**
@@ -39,8 +37,10 @@ function getImg() {
 function img_(sheet, wbIdColumn, pastColumn) {
   const data = sheet.getDataRange().getValues();
   const wbIdColumnIndex = wbIdColumn - 1;
-  let result = [["Фото"]];
+
+  const result = [["Фото"]];
   data.map((r, i) => {
+    console.log(r);
     if (i > 0) {
       if (
         r[wbIdColumnIndex] &&
@@ -60,28 +60,38 @@ function img_(sheet, wbIdColumn, pastColumn) {
 }
 
 class GenerateImgUrl {
-  constructor(nmId, photoSize, photoNumber) {
+  constructor(nmId, photoSize, photoNumber, format) {
     if (typeof nmId !== "number" || nmId < 0) {
       throw new Error("Invalid nmId value");
     }
     this.nmId = parseInt(nmId, 10);
-    this.size = photoSize || "c246x328";
+    this.size = photoSize || "big"; //"c246x328";
     this.number = photoNumber || 1;
+    this.format = format || "webp"; //"jpg";
   }
 
   getHost(id) {
-    if (id >= 0 && id <= 143) return "//basket-01.wb.ru";
-    if (id >= 144 && id <= 287) return "//basket-02.wb.ru";
-    if (id >= 288 && id <= 431) return "//basket-03.wb.ru";
-    if (id >= 432 && id <= 719) return "//basket-04.wb.ru";
-    if (id >= 720 && id <= 1007) return "//basket-05.wb.ru";
-    if (id >= 1008 && id <= 1061) return "//basket-06.wb.ru";
-    if (id >= 1062 && id <= 1115) return "//basket-07.wb.ru";
-    if (id >= 1116 && id <= 1169) return "//basket-08.wb.ru";
-    if (id >= 1170 && id <= 1313) return "//basket-09.wb.ru";
-    if (id >= 1314 && id <= 1601) return "//basket-10.wb.ru";
-    if (id >= 1602 && id <= 1655) return "//basket-11.wb.ru";
-    return "//basket-12.wb.ru";
+    const urlParts = [
+      { range: [0, 143], url: "//basket-01.wb.ru" },
+      { range: [144, 287], url: "//basket-02.wb.ru" },
+      { range: [288, 431], url: "//basket-03.wb.ru" },
+      { range: [432, 719], url: "//basket-04.wb.ru" },
+      { range: [720, 1007], url: "//basket-05.wb.ru" },
+      { range: [1008, 1061], url: "//basket-06.wb.ru" },
+      { range: [1062, 1115], url: "//basket-07.wb.ru" },
+      { range: [1116, 1169], url: "//basket-08.wb.ru" },
+      { range: [1170, 1313], url: "//basket-09.wb.ru" },
+      { range: [1314, 1601], url: "//basket-10.wb.ru" },
+      { range: [1602, 1655], url: "//basket-11.wb.ru" },
+      { range: [1656, 1919], url: "//basket-12.wb.ru" },
+      { range: [1920, 2045], url: "//basket-13.wb.ru" },
+      { range: [2046, Infinity], url: "//basket-14.wb.ru" },
+    ];
+
+    const { url } = urlParts.find(
+      ({ range }) => id >= range[0] && id <= range[1]
+    );
+    return url;
   }
 
   url() {
@@ -89,6 +99,6 @@ class GenerateImgUrl {
       part = ~~(this.nmId / 1e3);
     return `https:${this.getHost(vol)}/vol${vol}/part${part}/${
       this.nmId
-    }/images/${this.size}/${this.number}.jpg`;
+    }/images/${this.size}/${this.number}.${this.format}`;
   }
 }
