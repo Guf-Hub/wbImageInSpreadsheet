@@ -71,22 +71,28 @@ class GenerateImgUrl {
   }
 
   getHost(id) {
-    const urlParts = [
-      { range: [0, 143], url: "//basket-01.wb.ru" },
-      { range: [144, 287], url: "//basket-02.wb.ru" },
-      { range: [288, 431], url: "//basket-03.wb.ru" },
-      { range: [432, 719], url: "//basket-04.wb.ru" },
-      { range: [720, 1007], url: "//basket-05.wb.ru" },
-      { range: [1008, 1061], url: "//basket-06.wb.ru" },
-      { range: [1062, 1115], url: "//basket-07.wb.ru" },
-      { range: [1116, 1169], url: "//basket-08.wb.ru" },
-      { range: [1170, 1313], url: "//basket-09.wb.ru" },
-      { range: [1314, 1601], url: "//basket-10.wb.ru" },
-      { range: [1602, 1655], url: "//basket-11.wb.ru" },
-      { range: [1656, 1919], url: "//basket-12.wb.ru" },
-      { range: [1920, 2045], url: "//basket-13.wb.ru" },
-      { range: [2046, Infinity], url: "//basket-14.wb.ru" },
-    ];
+   const urlParts = [
+        { range: [0, 143], url: "//basket-01.wbbasket.ru" },
+        { range: [144, 287], url: "//basket-02.wbbasket.ru" },
+        { range: [288, 431], url: "//basket-03.wbbasket.ru" },
+        { range: [432, 719], url: "//basket-04.wbbasket.ru" },
+        { range: [720, 1007], url: "//basket-05.wbbasket.ru" },
+        { range: [1008, 1061], url: "//basket-06.wbbasket.ru" },
+        { range: [1062, 1115], url: "//basket-07.wbbasket.ru" },
+        { range: [1116, 1169], url: "//basket-08.wbbasket.ru" },
+        { range: [1170, 1313], url: "//basket-09.wbbasket.ru" },
+        { range: [1314, 1601], url: "//basket-10.wbbasket.ru" },
+        { range: [1602, 1655], url: "//basket-11.wbbasket.ru" },
+        { range: [1656, 1919], url: "//basket-12.wbbasket.ru" },
+        { range: [1920, 2045], url: "//basket-13.wbbasket.ru" },
+        { range: [2046, 2189], url: "//basket-14.wbbasket.ru" },
+        { range: [2190, 2333], url: "//basket-15.wbbasket.ru" },
+        { range: [2334, 2477], url: "//basket-16.wbbasket.ru" },
+        { range: [2478, 2621], url: "//basket-17.wbbasket.ru" },
+        { range: [2622, 2765], url: "//basket-18.wbbasket.ru" },
+        { range: [2766, 2909], url: "//basket-19.wbbasket.ru" },
+        { range: [2910, Infinity], url: "//basket-20.wbbasket.ru" },
+      ];
 
     const { url } = urlParts.find(
       ({ range }) => id >= range[0] && id <= range[1]
