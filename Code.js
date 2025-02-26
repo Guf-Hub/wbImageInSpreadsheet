@@ -69,38 +69,37 @@ class GenerateImgUrl {
     this.number = photoNumber || 1;
     this.format = format || "webp"; //"jpg";
   }
-
-  getHost(id) {
-    const urlParts = [
-      { range: [0, 143], url: "//basket-01.wbbasket.ru" },
-      { range: [144, 287], url: "//basket-02.wbbasket.ru" },
-      { range: [288, 431], url: "//basket-03.wbbasket.ru" },
-      { range: [432, 719], url: "//basket-04.wbbasket.ru" },
-      { range: [720, 1007], url: "//basket-05.wbbasket.ru" },
-      { range: [1008, 1061], url: "//basket-06.wbbasket.ru" },
-      { range: [1062, 1115], url: "//basket-07.wbbasket.ru" },
-      { range: [1116, 1169], url: "//basket-08.wbbasket.ru" },
-      { range: [1170, 1313], url: "//basket-09.wbbasket.ru" },
-      { range: [1314, 1601], url: "//basket-10.wbbasket.ru" },
-      { range: [1602, 1655], url: "//basket-11.wbbasket.ru" },
-      { range: [1656, 1919], url: "//basket-12.wbbasket.ru" },
-      { range: [1920, 2045], url: "//basket-13.wbbasket.ru" },
-      { range: [2046, 2189], url: "//basket-14.wbbasket.ru" },
-      { range: [2190, 2405], url: "//basket-15.wbbasket.ru" },
-      { range: [2406, 2621], url: "//basket-16.wbbasket.ru" },
-      { range: [2622, Infinity], url: "//basket-17.wbbasket.ru" },
-    ];
-
-    const { url } = urlParts.find(
-      ({ range }) => id >= range[0] && id <= range[1]
-    );
-    return url;
+ 
+  id(id) {
+    if (id <= 143) return "01";
+    if (id <= 287) return "02";
+    if (id <= 431) return "03";
+    if (id <= 719) return "04";
+    if (id <= 1007) return "05";
+    if (id <= 1061) return "06";
+    if (id <= 1115) return "07";
+    if (id <= 1169) return "08";
+    if (id <= 1313) return "09";
+    if (id <= 1601) return "10";
+    if (id <= 1655) return "11";
+    if (id <= 1919) return "12";
+    if (id <= 2045) return "13";
+    if (id <= 2189) return "14";
+    if (id <= 2405) return "15";
+    if (id <= 2621) return "16";
+    if (id <= 2837) return "17";
+    if (id <= 3053) return "18";
+    if (id <= 3269) return "19";
+    if (id <= 3485) return "20";
+    if (id <= 3701) return "21";
+    return "22";
   }
 
+
   url() {
-    const vol = ~~(this.nmId / 1e5),
-      part = ~~(this.nmId / 1e3);
-    return `https:${this.getHost(vol)}/vol${vol}/part${part}/${
+    const vol = ~~(this.nmId / 1e5);
+    const part = ~~(this.nmId / 1e3);
+    return `https:${this.id(vol)}/vol${vol}/part${part}/${
       this.nmId
     }/images/${this.size}/${this.number}.${this.format}`;
   }
