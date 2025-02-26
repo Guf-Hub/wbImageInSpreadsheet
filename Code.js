@@ -95,12 +95,10 @@ class GenerateImgUrl {
     return "22";
   }
 
-
   url() {
     const vol = ~~(this.nmId / 1e5);
     const part = ~~(this.nmId / 1e3);
-    return `https:${this.id(vol)}/vol${vol}/part${part}/${
-      this.nmId
-    }/images/${this.size}/${this.number}.${this.format}`;
+    return `https://basket-${this.id(vol)}.wbbasket.ru/vol${vol}/part${part}/${this.nmId
+      }/images/${this.size}/${this.number}.${this.format}`;
   }
 }
